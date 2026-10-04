@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <title>Haotian Zhao</title>
+  <rect width="32" height="32" rx="2" fill="#faf9f6"/>
+  <g fill="#214c3c">
+    <path d="M1 7h6v1.8H5.5v6.6h5V8.8H9V7h6v1.8h-1.5v14.4H15V25H9v-1.8h1.5v-6.6h-5v6.6H7V25H1v-1.8h1.5V8.8H1Z"/>
+    <path d="M17 7h14v2L20.8 23.2h7.1l1.2-3.5H31V25H16.5v-2L26.7 8.8h-6.8l-1.2 3.3H17Z"/>
+  </g>
+</svg>

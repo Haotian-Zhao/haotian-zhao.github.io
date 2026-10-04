@@ -25,6 +25,19 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Extract website
         run: unzip -q site.zip -d _site
+      - name: Set personal favicon
+        run: |
+          cp favicon.svg _site/favicon.svg
+          cp favicon.svg _site/favicon-hz.svg
+          cp favicon.ico _site/favicon.ico
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          for path in Path("_site").rglob("*"):
+              if path.suffix in {".html", ".txt"}:
+                  content = path.read_text(encoding="utf-8")
+                  if "/favicon.svg" in content:
+                      path.write_text(content.replace("/favicon.svg", "/favicon-hz.svg"), encoding="utf-8")
+          PYTHON
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
